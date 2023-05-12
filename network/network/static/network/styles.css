@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+    flex: 34% 40% 26%;
+    margin-top: 50px;
+    border-color: red;
+
+}
+
+/* .left-sidebar {
+  position: fixed;
+  top: 0;
+  margin-top: 13px;
+} */
+
+.twitter-logo{
+  display: inline-block;
+  border-radius: 50%;
+  height: 28px;
+  filter: invert(52%) sepia(50%) saturate(2964%) hue-rotate(179deg) brightness(95%) contrast(97%);
+  margin-left: 50px;
+}
+
+.twitter-logo:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.left-sidebar-menu {
+  font-size: 20px;
+  display: flex;
+  color: rgb(15, 20, 25);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.left-sidebar-menu-icon {
+  align-items: flex-start;
+  height: 26px;
+  margin-right: 15px;
+}
+
+.nav-item {
+  padding: 8px 10px 5px 40px;
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(15, 20, 25);
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  background: rgb(225, 232, 237);
+  color: rgb(15, 20, 25);
+}
+
+.tweet-btn{
+  display: block;
+  width: 230px;
+  background-color: #1d9bf0;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.tweet-btn:hover{
+  background: #088fe9;
+  color: #fff;
+}
+
+.sidebar-tweet-btn{
+  font-size: 20px;
+  color: #fff;
+  display: none;
+}
+
+
+/* --------------------------------NAVBAR PROFILE------------------------------------- */
+
+
+.sidebar-profile-block{ 
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  margin-left: 40px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.sidebar-profile-block:hover{
+  background-color: rgb(225, 232, 237);;
+}
+
+.sidebar-profile-content{
+  display: flex;
+  padding: 0 12px;
+}
+
+.tweet-author-image{
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.sidebar-profile-meta{
+  font-size: 15px;
+  padding: 5px 0;
+}
+
+.sidebar-extra{
+  font-size: 16px;
+  margin-top: 20px;
+  padding-left: 52px;
+}
+
+
+/* --------------------------------MAIN PAGE------ */
+
+.main-page{
+  border: 1px solid rgb(118, 118, 118, 0.1);
+  border-width: 0 1px;
+  margin-left: 50px;
+}
+.main-page-header {
+  font-size: 18px;
+  height: 48px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 22px;
+}
+
+.main-page-header-profile-picture {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  margin-left: 22px;
+  /* margin: 0 5px; */
+}
+
+.main-page-input {
+  border: 0 solid black;
+}
+
+.main-page-input-box {
+  padding-top: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-page-tweet-box {
+  margin-top: -5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  outline: none;
+
+}
+
+.main-page-tweet-box:focus main-page-tweet-box:hover {
+  outline: none !important;
+  box-shadow: none;
+  border: 0;
+
+}
+
+.main-page-tweet-box {
+  height: 130px;
+  border: 0;
+  margin-top: -10px;
+}
+
+::placeholder {
+  font-family: 'Open Sans', sans-serif;
+  opacity: 1;
+  font-size: 18px;
+  /* position: absolute;
+    margin-top: 10px; */
+
+}
+
+.main-page-input-privacy {
+  display: inline-block;
+  color: #1da1f2;
+  cursor: pointer;
+
+}
+
+.main-page-input-privacy-icon,
+main-page-input-privacy-text {
+  display: inline;
+}
+
+.main-page-input-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -35PX;
+}
+
+.main-page-input-icons-ul {
+  list-style-type: none;
+  margin-left: 5px;
+}
+
+.main-page-input-icons li {
+  display: inline;
+  /* width: 300px; */
+  list-style: none;
+  color: #1da1f2;
+  font-size: 20px;
+  margin: 0 2px;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+}
+
+.main-page-tweet-button {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #1da1f2;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  opacity: 0.5;
+}
+
+
+/* .left-sidebar-menu-icon-active using js {
+    filter: invert(52%) sepia(50%) saturate(2964%) hue-rotate(179deg) brightness(95%) contrast(97%);
+
+} */
+
+.tweetbox__input img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.tweetBox {
+  padding-bottom: 10px;
+  border-bottom: 8px solid var(--twitter-background);
+  padding-right: 10px;
+}
+
+.tweetBox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweetbox__input {
+  display: flex;
+  padding: 20px;
+}
+
+.tweetbox__input input {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.tweetBox__tweetButton {
+  border: none;
+  color: white;
+  font-weight: 900;
+
+  border-radius: 30px;
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.tweet {
+  display: flex;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #e6ecf0;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.tweet:hover {
+  background-color: #F5F8FA;
+}
+
+.tweet-author-image {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  margin-right: 12px;
+
+}
+
+.tweet-header {
+  display: flex;
+  font-size: 15px;
+
+}
+
+.tweet-author-username {
+  font-family: 'Times New Roman', Times, serif;
+  color: #14171a;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: 3px;
+}
+
+.tweet-author-username:hover,
+tweet-author-username:active,
+tweet-author-username:focus {
+  text-decoration: underline;
+  color: #14171a;
+}
+
+.tweet-author-handle {
+  color: rgb(113, 118, 123);
+  margin-right: 3px;
+}
+
+.tweeted-time {
+  margin-left: 3px;
+  color: rgb(113, 118, 123);
+}
+
+.tweeted-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.engagement-icons-ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-left: -30px;
+  width: 400px;
+}
+
+/* ------------------------RIGHT SIDEBAR-------------------------- */
+
+.right-sidebar-container{
+  display: flex; 
+}
+
+.right-sidebar{
+  flex-direction: row;
+  margin-right: 500px;
+  border-color: red;
+}
+
+.searchWrapper{
+  width: 100%;
+  margin: 5px auto;
+}
+
+.searchBar{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+#searchQuerySubmit{
+  width: 56px;
+  height: 44.8px;
+  margin-right: -56px;
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+#searchQueryInput{
+  width: 100%;
+  height: 44px;
+  background: #F5F8FA;
+  outline: none;
+  border: none;
+  border-radius: 26px;
+  padding: 0 36px 0 60px;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: rgb(15, 20, 25);
+  border-color: rgb(118, 118,118);
+  overflow-wrap: break-word;
+}
+
+#searchQueryInput:focus{
+  background-color: #fff;
+  border: 1.3px solid #1DA1F2;
+}
+
+
+/* ------------------------------TRENDS HEADER ------------------------------- */
+.sidebar-trends{
+  background-color: #F5F8FA;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin-top: 19px;
+}
+
+.trends-header{
+  color: rgb(15, 20, 25);
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  margin: 5px;
+}
+
+.trends-for-you{
+  padding: 10px 15px;
+}
+
+.trends-for-you:hover{
+  background-color: rgb(225, 232, 237);
+}
+
+
+.trends-meta-information{
+  font-size: 14px;
+  font-weight: 300;
+  color: #657786;
+}
+
+.trending-name{
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(15, 20, 25);
+}
+
+/* ---------------------------who to follow sidebar-------------------- */
+
+.sidebar-who-to-follow{
+  background-color: #F5F8FA;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin-top: 19px;
+}
+
+.who-to-follow-header{
+    color: rgb(15, 20, 25);
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 5px;
+}
+
+.who-to-follow-block{
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.who-to-follow-block:hover{
+  background-color: rgb(225, 232, 237);
+}
+
+.who-to-follow-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.who-to-follow-meta{
+  display: flex;
+  flex-direction: column;
+}
+
+.follow-btn{
+  margin-left: 12px;
+  background-color: #14171a;
+  border-radius: 9999px;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0 16px;
+  color: white;
+  text-align: center;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 15px;
+  }
+
+
+.twitter-name{
+  color: rgb(15, 20, 25);
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.5;
+  /* font-weight: 400; */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+.twitter-name:hover{
+  color: rgb(15, 20, 25);
+  text-decoration: none;
+}
+
+.twitter-handle{
+  color: rgb(83, 100, 113);
+  text-decoration: none;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+.twitter-handle:hover {
+  color: rgb(83, 100, 113);
+  text-decoration: none;
+}
+
+/* --------------------------SIDEBAR FOOTER------------------- */
+.sidebar-footer{
+  margin-top: 15px;
+}
+
+.sidebar-footer-row{
+  padding: 0 16px;
+}
+
+.sidebar-footer-row a{
+  padding: 0 0 0 12px;
+  font-size: 15px;
+  color: rgb(83, 100, 113);
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 2px 0;
+  text-decoration: none;
+}
+
+.sidebar-footer-row a:hover{
+  text-decoration: underline;
+}
+
+/* ----------------RESPONSIVENESS------------------- */
+@media screen and (max-width: 1200px) {
+  .left-sidebar{
+    width: 75px;
+  }
+
+  .nav-item{
+    padding: 9px 11px;
+  }
+
+  .left-sidebar-menu-icon{
+    margin-left: 0;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .tweet-btn{
+    font-size: 20px;
+    width: auto;
+    padding: 12px;
+
+  }
+
+  .sidebar-tweet-btn{
+    display: block;
+    margin: auto;
+  }
+
+  .sidebar-profile-content{
+    display: none;
+  }
+
+  .sidebar-profile-profilepic{
+    margin-right: 0;
+    width: 55px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .right-sidebar {
+      display: none;
+    }
+
+  .main-page-input-icons-ul{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+/* -------------------------------------PROFILE PAGE----------------------------------- */
+
+/* .cols-container-img{
+  background-color: pink;
+} */
+
+.profile__wrapper {
+  display: flex;
+  /* background-color: red; */
+}
+.img-container {
+  justify-content: center;
+  align-items: center;
+  /* background-color: greenyellow; */
+}
+
+.about {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.about li {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+
+/* .header_headerimg {
+  width: 100%;
+  background: url("http: //placeimg.com/640/480/nature") no-repeat 50% 20% / contain;
+  min-height: calc(100px + 15vw);
+} */
+/* 
+.header__wrapper .cols__container .content__col {
+  padding: 25px 20px;
+  text-align: center;
+  /* max-width: 350px; */
+  /* position: relative;
+  margin: 0 auto;
+} */
+
+/* .header__wrapper .cols__container .content__col .img__container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.header__wrapper .cols__container .content__col .img__container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+.header__wrapper .cols__container .content__col h2 {
+  margin-top: 60px;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.header__wrapper .cols__container .content__col .about {
+  justify-content: space-between;
+  position: relative;
+  margin: 35px 0;
+}
+
+.header__wrapper .cols__container .content__col .about li {
+  display: flex;
+  flex-direction: column;
+  color: #818181;
+  font-size: 0.9rem;
+} */
+
+/* .header__wrapper .cols__container .content__col .about li span {
+  color: #1d1d1d;
+  font-weight: 600;
+}
+
+.header__wrapper .cols__container .content__col .about:after {
+  position: absolute;
+  content: "";
+  bottom: -16px;
+  display: block;
+  background: #cccccc;
+  height: 1px;
+  width: 100%;
+}  */
+

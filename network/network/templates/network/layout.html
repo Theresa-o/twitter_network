@@ -1,0 +1,239 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/984d0a3d8c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div class="container">
+                    <nav>
+                        <div class="left-sidebar sidebar">
+                            <a class="navbar-brand" href="#">
+                                <img src= {% static 'network/images/brand.svg' %} alt="Twitter logo" class="twitter-logo">
+                            </a>
+                            <ul class="nav flex-column left-sidebar-menu mb-4 mt-2">
+                                <li class="nav-item">
+                                    <a class="nav-link text-decoration-none" href="{% url 'index' %}">
+                                        <img src= {% static 'network/images/all-post.svg' %} alt="All post" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">All Post</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'following_feed' %}">
+                                        <img src= {% static 'network/images/following.svg' %} alt="Following" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Following</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/notifications.svg' %} alt="Notifications" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Notifications</span>
+                                    </a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/messages.svg' %} alt="Messages" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Messages</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/bookmark.svg' %} alt="Bookmarks" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Bookmarks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/list.svg' %} alt="List" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Lists</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'profile' user.id %}">
+                                        <img src= {% static 'network/images/profile.svg' %} alt="Profile" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <img src= {% static 'network/images/more.svg' %} alt="More" class="left-sidebar-menu-icon">
+                                        <span class="nav-text">More</span>
+                                    </a>
+                                </li>
+                                <a href="#" class="tweet-btn">
+                                    <img src= {% static 'network/images/pen.svg' %} alt="Tweet" class="left-sidebar-menu-icon sidebar-tweet-btn">
+                                    <span class="nav-text">Tweet</span>
+                                </a>
+                            </ul>
+                            <div class="sidebar-profile">
+                                <div class="sidebar-profile-block">
+                                    <div class="sidebar-profile-profilepic">
+                                        <img src="http://placeimg.com/35/35/arch" class="tweet-author-image" alt="profile-picture"/>
+                                    </div>
+                                    <div class="sidebar-profile-content">
+                                        <div class="sidebar-profile-meta">
+                                            <div>
+                                                <a href="#" class="twitter-name">Tess</a>
+                                            </div>
+                                            <div>
+                                                <a href="#" class="twitter-handle">@Tess</a>
+                                            </div>
+                                        </div>
+                                        <div class="sidebar-profile-extra">
+                                            <i class="fa-solid fa-ellipsis sidebar-extra"></i>
+                                        </div>
+                                    </div>   
+                                </div>   
+                            </div>
+                        </div>
+                    </nav>
+                    
+            <div>
+                {% block body %}
+                {% endblock %}
+            </div>
+
+            <!-- <div class="sidebar right-sidebar-container">
+                <div class="right-sidebar sidebar">
+                    <div class="searchWrapper d-lg-block">
+                        <div class="searchBar">
+                            <button id="searchQuerySubmit" type="submit">
+                                <img src= {% static 'network/images/search.svg' %} alt="Twitter search" class="twitter-search">
+                            </button>
+                            <input type="text" id="searchQueryInput" placeholder="Search Twitter" value="">
+                        </div>
+                    </div>
+                    <div class="sidebar-trends">
+                        <div class="trends-header">Trends for you</div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Trending in London</div>
+                            <div class="trending-name">Empowered</div>
+                            <div class="trends-meta-information">23.7k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Trending in New York</div>
+                            <div class="trending-name">Wall Street Bet</div>
+                            <div class="trends-meta-information">29.7k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Trending in Germany</div>
+                            <div class="trending-name">Danke</div>
+                            <div class="trends-meta-information">30k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Trending in Spain</div>
+                            <div class="trending-name">Shakira</div>
+                            <div class="trends-meta-information">32.7k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Trending</div>
+                            <div class="trending-name">Vice President</div>
+                            <div class="trends-meta-information">2.9k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Entertainment <span>.</span> Trending</div>
+                            <div class="trending-name">Ed Sheeran</div>
+                            <div class="trends-meta-information">47k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Business <span>.</span> Trending</div>
+                            <div class="trending-name">Stock market</div>
+                            <div class="trends-meta-information">13.2k Tweets</div>
+                        </div>
+                        <div class="trends-for-you">
+                            <div class="trends-meta-information">Entertainment <span>.</span> Trending</div>
+                            <div class="trending-name">Actors</div>
+                            <div class="trends-meta-information">7,907 Tweets</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-who-to-follow">
+                        <div class="who-to-follow-header">Who to follow</div>
+                        <div class="who-to-follow-block">
+                            <div class="who-to-follow-profilepic">
+                                <img src="http://placeimg.com/140/140/arch" class="tweet-author-image alt="profile-picture"/>
+                            </div>
+                            <div class="who-to-follow-content">
+                                <div class="who-to-follow-meta">
+                                    <div>
+                                        <a href="#" class="twitter-name">Wonderworks</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="twitter-handle">@Wonderworks</a>
+                                    </div>
+                                </div>
+                                <div class="who-to-follow-btn">
+                                        <button class="follow-btn">Follow</button>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="who-to-follow-block">
+                            <div class="who-to-follow-profilepic">
+                                <img src="http://placeimg.com/140/140/people" class="tweet-author-image alt="profile-picture"/>
+                            </div>
+                            <div class="who-to-follow-content">
+                                <div class="who-to-follow-meta">
+                                    <div>
+                                        <a href="#" class="twitter-name">Sandra.fyll</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="twitter-handle">@Sandrafyll</a> 
+                                    </div>
+                                </div>
+                                <div class="who-to-follow-btn">
+                                    <button class="follow-btn">Follow</button>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="who-to-follow-block">
+                            <div class="who-to-follow-profilepic">
+                                <img src="http://placeimg.com/140/140/nature" class="tweet-author-image alt="profile-picture"/>
+                            </div>
+                            <div class="who-to-follow-content">
+                                <div class="who-to-follow-meta">
+                                    <div>
+                                        <a href="#" class="twitter-name">Imaginature</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="twitter-handle">@Imaginature</a> 
+                                    </div>
+                                </div>
+                
+                                <div class="who-to-follow-btn">
+                                    <button class="follow-btn">Follow</button>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="sidebar-footer">
+                        <div class="sidebar-footer-row">
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                        <div class="sidebar-footer-row">
+                            <a href="#">Accessibility</a>
+                            <a href="#">Ads Info</a>
+                            <a href="#">More</a>
+                        </div>
+                        <div class="sidebar-footer-row">
+                            <a href="#">2022, Twitter Inc</a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+    -->
+
+<!-- ------------------------------------------------------------------- -->
+    </div>
+        <script src='{% static 'network/js/main.js' %}'></script>
+    </body>
+</html>
+

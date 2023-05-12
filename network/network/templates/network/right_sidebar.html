@@ -1,0 +1,135 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="right-sidebar sidebar">
+    <div class="searchWrapper d-lg-block">
+        <div class="searchBar">
+            <button id="searchQuerySubmit" type="submit">
+                <img src= {% static 'network/images/search.svg' %} alt="Twitter search" class="twitter-search">
+            </button>
+            <input type="text" id="searchQueryInput" placeholder="Search Twitter" value="">
+        </div>
+    </div>
+    <div class="sidebar-trends">
+        <div class="trends-header">Trends for you</div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Trending in London</div>
+            <div class="trending-name">Empowered</div>
+            <div class="trends-meta-information">23.7k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Trending in New York</div>
+            <div class="trending-name">Wall Street Bet</div>
+            <div class="trends-meta-information">29.7k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Trending in Germany</div>
+            <div class="trending-name">Danke</div>
+            <div class="trends-meta-information">30k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Trending in Spain</div>
+            <div class="trending-name">Shakira</div>
+            <div class="trends-meta-information">32.7k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Trending</div>
+            <div class="trending-name">Vice President</div>
+            <div class="trends-meta-information">2.9k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Entertainment <span>.</span> Trending</div>
+            <div class="trending-name">Ed Sheeran</div>
+            <div class="trends-meta-information">47k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Business <span>.</span> Trending</div>
+            <div class="trending-name">Stock market</div>
+            <div class="trends-meta-information">13.2k Tweets</div>
+        </div>
+        <div class="trends-for-you">
+            <div class="trends-meta-information">Entertainment <span>.</span> Trending</div>
+            <div class="trending-name">Actors</div>
+            <div class="trends-meta-information">7,907 Tweets</div>
+        </div>
+    </div>
+    <div class="sidebar-who-to-follow">
+        <div class="who-to-follow-header">Who to follow</div>
+        <div class="who-to-follow-block">
+            <div class="who-to-follow-profilepic">
+                <img src="http://placeimg.com/140/140/arch" class="tweet-author-image alt="profile-picture"/>
+            </div>
+            <div class="who-to-follow-content">
+                <div class="who-to-follow-meta">
+                    <div>
+                        <a href="#" class="twitter-name">Wonderworks</a>
+                    </div>
+                    <div>
+                        <a href="#" class="twitter-handle">@Wonderworks</a>
+                    </div>
+                </div>
+                <div class="who-to-follow-btn">
+                        <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="who-to-follow-block">
+            <div class="who-to-follow-profilepic">
+                <img src="http://placeimg.com/140/140/people" class="tweet-author-image alt="profile-picture"/>
+            </div>
+            <div class="who-to-follow-content">
+                <div class="who-to-follow-meta">
+                    <div>
+                        <a href="#" class="twitter-name">Sandra.fyll</a>
+                    </div>
+                    <div>
+                        <a href="#" class="twitter-handle">@Sandrafyll</a> 
+                    </div>
+                </div>
+                <div class="who-to-follow-btn">
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="who-to-follow-block">
+            <div class="who-to-follow-profilepic">
+                <img src="http://placeimg.com/140/140/nature" class="tweet-author-image alt="profile-picture"/>
+            </div>
+            <div class="who-to-follow-content">
+                <div class="who-to-follow-meta">
+                    <div>
+                        <a href="#" class="twitter-name">Imaginature</a>
+                    </div>
+                    <div>
+                        <a href="#" class="twitter-handle">@Imaginature</a> 
+                    </div>
+                </div>
+
+                <div class="who-to-follow-btn">
+                    <button class="follow-btn">Follow</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="sidebar-footer">
+        <div class="sidebar-footer-row">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+        </div>
+        <div class="sidebar-footer-row">
+            <a href="#">Accessibility</a>
+            <a href="#">Ads Info</a>
+            <a href="#">More</a>
+        </div>
+        <div class="sidebar-footer-row">
+            <a href="#">2022, Twitter Inc</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
